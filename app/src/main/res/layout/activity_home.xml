@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/poker_felt"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="stanford.michael_hazard_assignment_1.Home">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nice Dice"
+                android:textSize="42sp"
+                android:textColor="#ffd700"
+                android:layout_gravity="left" />
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Clear"
+                android:layout_gravity="right"
+                android:id="@+id/clearExecute"
+                android:onClick="clearEx"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of Sides:"
+                android:textColor="#ffd700" />
+
+            <EditText
+                android:layout_weight="1"
+                android:id="@+id/numSides"
+                android:inputType="number"
+                android:text="6"
+                android:textColor="#ffd700" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of Dice:"
+                android:textColor="#ffd700" />
+
+            <EditText
+                android:layout_weight="1"
+                android:id="@+id/numDice"
+                android:inputType="number"
+                android:text="1"
+                android:textColor="#ffd700" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of Rolls:"
+                android:textColor="#ffd700" />
+
+            <EditText
+                android:layout_weight="1"
+                android:id="@+id/numRolls"
+                android:inputType="number"
+                android:text="1"
+                android:textColor="#ffd700" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Roll"
+            android:gravity="center"
+            android:id="@+id/rollExecute"
+            android:onClick="roll"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Roll info will print here upon execution:"
+            android:id="@+id/rollInfo"
+            android:textColor="#ffd700"/>
+    </LinearLayout>
+
+</LinearLayout>
